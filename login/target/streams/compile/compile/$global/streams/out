@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/admin1/Documents/play framework/login/conf/routes:11:1: type HomeController is not a member of package controller[0m
+[0m[[0m[31merror[0m] [0m[0mGET     /welcome                     controller.HomeController.welcome [0m
+[0m[[0m[31merror[0m] [0m[0m/home/admin1/Documents/play framework/login/conf/routes:11:1: type HomeController is not a member of package controller[0m
+[0m[[0m[31merror[0m] [0m[0mGET     /welcome                     controller.HomeController.welcome [0m
+[0m[[0m[31merror[0m] [0m[0m/home/admin1/Documents/play framework/login/conf/routes:11:1: type HomeController is not a member of package controller[0m
+[0m[[0m[31merror[0m] [0m[0mGET     /welcome                     controller.HomeController.welcome [0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
