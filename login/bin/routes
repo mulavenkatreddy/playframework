@@ -3,14 +3,27 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /home                          controllers.HomeController.index
+GET     /                          controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 GET     /data                          controllers.HomeController.message
 
-GET     /getname/:name/:lastName                          controllers.HomeController.printname(name:String,lastName:String)
++nocsrf
+GET     /sample                        controllers.RegistrationController.getUsers()
 
-GET     /sample                          controllers.HomeController.sample
++nocsrf
+GET     /register						controllers.RegistrationController.register	
+
+GET     /login						controllers.RegistrationController.login
+	
++nocsrf
+POST    /register                     controllers.RegistrationController.save()
+
+
+
+
+
+
 

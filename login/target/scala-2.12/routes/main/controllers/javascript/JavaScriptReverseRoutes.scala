@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/admin1/Documents/play framework/login/conf/routes
-// @DATE:Mon May 20 19:37:01 IST 2019
+// @DATE:Tue May 21 18:55:53 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,6 +11,56 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
+  // @LINE:14
+  class ReverseRegistrationController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:22
+    def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RegistrationController.save",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
+        }
+      """
+    )
+  
+    // @LINE:14
+    def getUsers: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RegistrationController.getUsers",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sample"})
+        }
+      """
+    )
+  
+    // @LINE:17
+    def register: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RegistrationController.register",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
+        }
+      """
+    )
+  
+    // @LINE:19
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RegistrationController.login",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+        }
+      """
+    )
+  
+  }
+
   // @LINE:6
   class ReverseHomeController(_prefix: => String) {
 
@@ -19,32 +69,12 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
-    def sample: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.sample",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sample"})
-        }
-      """
-    )
-  
-    // @LINE:13
-    def printname: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.printname",
-      """
-        function(name0,lastName1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "getname/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("name", name0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("lastName", lastName1))})
-        }
-      """
-    )
-  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "home"})
+          return _wA({method:"GET", url:"""" + _prefix + """"})
         }
       """
     )

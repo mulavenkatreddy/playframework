@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/admin1/Documents/play framework/login/conf/routes
-// @DATE:Mon May 20 19:37:01 IST 2019
+// @DATE:Tue May 21 18:55:53 IST 2019
 
 package router
 
@@ -15,24 +15,28 @@ import _root_.play.libs.F
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
-  HomeController_1: controllers.HomeController,
+  HomeController_2: controllers.HomeController,
   // @LINE:9
   Assets_0: controllers.Assets,
+  // @LINE:14
+  RegistrationController_1: controllers.RegistrationController,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
-    HomeController_1: controllers.HomeController,
+    HomeController_2: controllers.HomeController,
     // @LINE:9
-    Assets_0: controllers.Assets
-  ) = this(errorHandler, HomeController_1, Assets_0, "/")
+    Assets_0: controllers.Assets,
+    // @LINE:14
+    RegistrationController_1: controllers.RegistrationController
+  ) = this(errorHandler, HomeController_2, Assets_0, RegistrationController_1, "/")
 
   def withPrefix(addPrefix: String): Routes = {
     val prefix = play.api.routing.Router.concatPrefix(addPrefix, this.prefix)
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_1, Assets_0, prefix)
+    new Routes(errorHandler, HomeController_2, Assets_0, RegistrationController_1, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -40,11 +44,13 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """home""", """controllers.HomeController.index"""),
+    ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """data""", """controllers.HomeController.message"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """getname/""" + "$" + """name<[^/]+>/""" + "$" + """lastName<[^/]+>""", """controllers.HomeController.printname(name:String, lastName:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """sample""", """controllers.HomeController.sample"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """sample""", """controllers.RegistrationController.getUsers()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.RegistrationController.register"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.RegistrationController.login"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.RegistrationController.save()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -54,17 +60,17 @@ class Routes(
 
   // @LINE:6
   private[this] lazy val controllers_HomeController_index0_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("home")))
+    PathPattern(List(StaticPart(this.prefix)))
   )
   private[this] lazy val controllers_HomeController_index0_invoker = createInvoker(
-    HomeController_1.index,
+    HomeController_2.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
       "index",
       Nil,
       "GET",
-      this.prefix + """home""",
+      this.prefix + """""",
       """ An example controller showing a sample home page""",
       Seq()
     )
@@ -93,7 +99,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("data")))
   )
   private[this] lazy val controllers_HomeController_message2_invoker = createInvoker(
-    HomeController_1.message,
+    HomeController_2.message,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -106,39 +112,75 @@ class Routes(
     )
   )
 
-  // @LINE:13
-  private[this] lazy val controllers_HomeController_printname3_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("getname/"), DynamicPart("name", """[^/]+""",true), StaticPart("/"), DynamicPart("lastName", """[^/]+""",true)))
+  // @LINE:14
+  private[this] lazy val controllers_RegistrationController_getUsers3_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("sample")))
   )
-  private[this] lazy val controllers_HomeController_printname3_invoker = createInvoker(
-    HomeController_1.printname(fakeValue[String], fakeValue[String]),
+  private[this] lazy val controllers_RegistrationController_getUsers3_invoker = createInvoker(
+    RegistrationController_1.getUsers(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.HomeController",
-      "printname",
-      Seq(classOf[String], classOf[String]),
+      "controllers.RegistrationController",
+      "getUsers",
+      Nil,
       "GET",
-      this.prefix + """getname/""" + "$" + """name<[^/]+>/""" + "$" + """lastName<[^/]+>""",
+      this.prefix + """sample""",
+      """""",
+      Seq("""nocsrf""")
+    )
+  )
+
+  // @LINE:17
+  private[this] lazy val controllers_RegistrationController_register4_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("register")))
+  )
+  private[this] lazy val controllers_RegistrationController_register4_invoker = createInvoker(
+    RegistrationController_1.register,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RegistrationController",
+      "register",
+      Nil,
+      "GET",
+      this.prefix + """register""",
+      """""",
+      Seq("""nocsrf""")
+    )
+  )
+
+  // @LINE:19
+  private[this] lazy val controllers_RegistrationController_login5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+  )
+  private[this] lazy val controllers_RegistrationController_login5_invoker = createInvoker(
+    RegistrationController_1.login,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RegistrationController",
+      "login",
+      Nil,
+      "GET",
+      this.prefix + """login""",
       """""",
       Seq()
     )
   )
 
-  // @LINE:15
-  private[this] lazy val controllers_HomeController_sample4_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("sample")))
+  // @LINE:22
+  private[this] lazy val controllers_RegistrationController_save6_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("register")))
   )
-  private[this] lazy val controllers_HomeController_sample4_invoker = createInvoker(
-    HomeController_1.sample,
+  private[this] lazy val controllers_RegistrationController_save6_invoker = createInvoker(
+    RegistrationController_1.save(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.HomeController",
-      "sample",
+      "controllers.RegistrationController",
+      "save",
       Nil,
-      "GET",
-      this.prefix + """sample""",
+      "POST",
+      this.prefix + """register""",
       """""",
-      Seq()
+      Seq("""nocsrf""")
     )
   )
 
@@ -148,7 +190,7 @@ class Routes(
     // @LINE:6
     case controllers_HomeController_index0_route(params@_) =>
       call { 
-        controllers_HomeController_index0_invoker.call(HomeController_1.index)
+        controllers_HomeController_index0_invoker.call(HomeController_2.index)
       }
   
     // @LINE:9
@@ -160,19 +202,31 @@ class Routes(
     // @LINE:11
     case controllers_HomeController_message2_route(params@_) =>
       call { 
-        controllers_HomeController_message2_invoker.call(HomeController_1.message)
+        controllers_HomeController_message2_invoker.call(HomeController_2.message)
       }
   
-    // @LINE:13
-    case controllers_HomeController_printname3_route(params@_) =>
-      call(params.fromPath[String]("name", None), params.fromPath[String]("lastName", None)) { (name, lastName) =>
-        controllers_HomeController_printname3_invoker.call(HomeController_1.printname(name, lastName))
-      }
-  
-    // @LINE:15
-    case controllers_HomeController_sample4_route(params@_) =>
+    // @LINE:14
+    case controllers_RegistrationController_getUsers3_route(params@_) =>
       call { 
-        controllers_HomeController_sample4_invoker.call(HomeController_1.sample)
+        controllers_RegistrationController_getUsers3_invoker.call(RegistrationController_1.getUsers())
+      }
+  
+    // @LINE:17
+    case controllers_RegistrationController_register4_route(params@_) =>
+      call { 
+        controllers_RegistrationController_register4_invoker.call(RegistrationController_1.register)
+      }
+  
+    // @LINE:19
+    case controllers_RegistrationController_login5_route(params@_) =>
+      call { 
+        controllers_RegistrationController_login5_invoker.call(RegistrationController_1.login)
+      }
+  
+    // @LINE:22
+    case controllers_RegistrationController_save6_route(params@_) =>
+      call { 
+        controllers_RegistrationController_save6_invoker.call(RegistrationController_1.save())
       }
   }
 }

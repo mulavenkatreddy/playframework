@@ -1,6 +1,7 @@
 package controllers;
 
 import play.mvc.Controller;
+import views.html.*;
 import play.mvc.Result;
 /**
  * This controller contains an action to handle HTTP requests
@@ -20,16 +21,19 @@ public class HomeController extends Controller {
     }
     
     public Result sample() {
-    	return ok(views.html.sample.render());
+    	//return ok(views.html.sample.render());
+    	//return ok(views.html.loginpage.render());
+    	return null;
     }
     
     public Result message() {
     	return ok ("hello");
     }
     
-    public Result printname(String name,String lastName) {
-    	return ok(name+" "+lastName);
-    }
+//    public Result printname(String name,String lastName) {
+//    	//return ok(name+" "+lastName);
+//    	return ok(sample.render(name,lastName));
+//    }
     
  
 

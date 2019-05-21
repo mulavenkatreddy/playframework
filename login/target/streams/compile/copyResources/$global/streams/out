@@ -1,4 +1,7 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	(/home/admin1/Documents/play framework/login/conf/application.conf,/home/admin1/Documents/play framework/login/target/scala-2.12/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/admin1/Documents/play framework/login/conf/evolutions,/home/admin1/Documents/play framework/login/target/scala-2.12/classes/evolutions)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/admin1/Documents/play framework/login/conf/evolutions/default,/home/admin1/Documents/play framework/login/target/scala-2.12/classes/evolutions/default)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/admin1/Documents/play framework/login/conf/evolutions/default/1.sql,/home/admin1/Documents/play framework/login/target/scala-2.12/classes/evolutions/default/1.sql)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	(/home/admin1/Documents/play framework/login/conf/routes,/home/admin1/Documents/play framework/login/target/scala-2.12/classes/routes)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	(/home/admin1/Documents/play framework/login/conf/logback.xml,/home/admin1/Documents/play framework/login/target/scala-2.12/classes/logback.xml)[0m

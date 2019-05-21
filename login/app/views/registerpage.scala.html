@@ -1,0 +1,24 @@
+@(registerForm:Form[Register]) (implicit request: Http.Request)
+@import helper._
+<html>
+<head>
+	<title>welcome to Registeration page</title>
+</head>
+<body>
+<div align="center">
+<h1>Register</h1>
+@helper.form(action = routes.RegistrationController.save()){
+
+			@helper.inputText(registerForm("id"))
+			@helper.inputText(registerForm("FirstName"))
+			@helper.inputText(registerForm("LastName"))
+			@helper.inputText(registerForm("Mobilenumber"))
+			@helper.inputText(registerForm("EmailId"))
+			@helper.inputText(registerForm("Password"))
+			
+			<input type="submit" value="Register">
+			<input type="submit" value="Login">
+}
+</body>
+</body>
+</html>
