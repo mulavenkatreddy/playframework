@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(evolutions, jdbc)
 libraryDependencies += javaJdbc
 libraryDependencies += "org.glassfish.jaxb" % "jaxb-core" % "2.3.0.1"
 libraryDependencies += "org.glassfish.jaxb" % "jaxb-runtime" % "2.3.2"
+libraryDependencies += javaForms
 
 // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
 EclipseKeys.preTasks := Seq(compile in Compile, compile in Test)
