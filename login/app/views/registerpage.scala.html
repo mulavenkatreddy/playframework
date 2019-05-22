@@ -1,4 +1,4 @@
-@(registerForm:Form[Register]) (implicit request: Http.Request)
+@(registerForm:Form[Register]) 
 @import helper._
 <html>
 <head>
@@ -9,16 +9,17 @@
 <h1>Register</h1>
 @helper.form(action = routes.RegistrationController.save()){
 
-			@helper.inputText(registerForm("id"))
-			@helper.inputText(registerForm("FirstName"))
-			@helper.inputText(registerForm("LastName"))
-			@helper.inputText(registerForm("Mobilenumber"))
-			@helper.inputText(registerForm("EmailId"))
-			@helper.inputText(registerForm("Password"))
+			@helper.inputText(registerForm("firstName"))
+			@helper.inputText(registerForm("lastName"))
+			@helper.inputText(registerForm("mobileNumber"))
+			@helper.inputText(registerForm("emailId"))
+			@helper.inputPassword(registerForm("password"))
 			
 			<input type="submit" value="Register">
-			<input type="submit" value="Login">
 }
+<form action="/login">
+    <input type="submit" value="Login" />
+</form>
 </body>
 </body>
 </html>

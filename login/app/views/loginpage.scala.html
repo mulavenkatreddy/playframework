@@ -1,14 +1,18 @@
+@(loginForm:Form[Login]) 
+@import helper._
 <html>
 <head>
-	<title>welcome to Registeration page</title>
+	<title>welcome to Login page</title>
 </head>
 <body>
 <div align="center">
-EmailID: <input type="email" name="EmailID" ><br>
-Password: <input type="password" name="Password" ><br>
-<input type="submit" value="Login">
-<input type="submit" value="Register">
-</div>
+<h1>Login to play framework</h1>
+@helper.form(action = routes.RegistrationController.verifyLogin()){
+
+			@helper.inputText(loginForm("emailId"))
+			@helper.inputPassword(loginForm("password"))
+			<input type="submit" value="Login">
+	}
+</body>
 </body>
 </html>
-

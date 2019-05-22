@@ -1,21 +1,26 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import io.ebean.Finder;
 import io.ebean.Model;
 
 @Entity
+@Table(name = "register")
 public class Register extends Model{
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long id;
-	public String  FirstName;
-	public String LastName;
-	public String Mobilenumber;
-	public String EmailId;
-	public String Password;
+	public String  firstName;
+	public String lastName;
+	public String mobileNumber;
+	public String emailId;
+	public String pass;
 	
 	
 	public static Finder<Long,Register> find = new Finder<>(Register.class);
@@ -26,20 +31,20 @@ public class Register extends Model{
 		
 	}
 
-	public Register(Long id, String firstName, String lastName, String mobilenumber, String emailId, String password) {
+	public Register(Long id, String firstName, String lastName, String mobilenumber, String emailId, String pass) {
 		super();
 		this.id = id;
-		FirstName = firstName;
-		LastName = lastName;
-		Mobilenumber = mobilenumber;
-		EmailId = emailId;
-		Password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobileNumber = mobilenumber;
+		this.emailId = emailId;
+		this.pass = pass;
 	}
 
 	@Override
 	public String toString() {
-		return "Register [id=" + id + ", FirstName=" + FirstName + ", LastName=" + LastName + ", Mobilenumber="
-				+ Mobilenumber + ", EmailId=" + EmailId + ", Password=" + Password + "]";
+		return "Register [id=" + id + ", FirstName=" + firstName + ", LastName=" + lastName + ", Mobilenumber="
+				+ mobileNumber + ", EmailId=" + emailId + ", Password=" + pass + "]";
 	}
 
 	public Long getId() {
@@ -51,43 +56,43 @@ public class Register extends Model{
 	}
 
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 
 	public String getMobilenumber() {
-		return Mobilenumber;
+		return mobileNumber;
 	}
 
 	public void setMobilenumber(String mobilenumber) {
-		Mobilenumber = mobilenumber;
+		this.mobileNumber = mobilenumber;
 	}
 
 	public String getEmailId() {
-		return EmailId;
+		return emailId;
 	}
 
 	public void setEmailId(String emailId) {
-		EmailId = emailId;
+		this.emailId = emailId;
 	}
 
-	public String getPassword() {
-		return Password;
+	public String getPass() {
+		return pass;
 	}
 
-	public void setPassword(String password) {
-		Password = password;
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 
 	public static Finder<Long, Register> getFind() {

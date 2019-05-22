@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/admin1/Documents/play framework/login/conf/routes
-// @DATE:Tue May 21 18:55:53 IST 2019
+// @DATE:Wed May 22 18:24:33 IST 2019
 
 
 package router {

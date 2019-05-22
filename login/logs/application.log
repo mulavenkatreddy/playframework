@@ -1,23 +1,428 @@
-2019-05-21 20:04:30,472 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-5 - Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2019-05-21 20:04:30,479 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
-2019-05-21 20:04:30,695 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-5 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 18: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
-2019-05-21 20:04:31,774 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-5 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-05-22 18:29:26,563 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-3 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 18:29:26,572 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2019-05-22 18:29:27,266 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-3 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 18:29:27,266 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-3 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 18:29:27,997 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     play.filters.csrf.CSRFFilter
 
-2019-05-21 20:04:31,780 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-5 - Application started (Dev) (no global state)
-2019-05-21 20:04:33,051 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2019-05-21 20:04:33,216 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-8 - Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2019-05-21 20:04:33,216 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2019-05-21 20:04:33,219 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-8 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 18: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
-2019-05-21 20:04:33,329 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-05-22 18:29:28,003 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev) (no global state)
+2019-05-22 18:49:16,087 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2019-05-22 18:49:16,268 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-11 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 18:49:16,268 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
+2019-05-22 18:49:16,270 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-11 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 18:49:16,270 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-11 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 18:49:16,435 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     play.filters.csrf.CSRFFilter
 
-2019-05-21 20:04:33,332 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2019-05-22 18:49:16,438 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
+2019-05-22 18:50:21,379 [ERROR] from application in application-akka.actor.default-dispatcher-3 - 
+
+! @7c147n46d - Internal server error, for (POST) [/login] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NoSuchElementException: No value present]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:351)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:267)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:448)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:446)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	at controllers.RegistrationController.verifyLogin(RegistrationController.java:48)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$16(Routes.scala:254)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:143)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:142)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:116)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:131)
+	at play.mvc.Action.lambda$call$0(Action.java:89)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at play.mvc.Action.call(Action.java:81)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:191)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:79)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:72)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:71)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:372)
+	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:371)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:379)
+	at scala.concurrent.impl.Promise.transform(Promise.scala:33)
+	at scala.concurrent.impl.Promise.transform$(Promise.scala:31)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:379)
+	at scala.concurrent.Future.map(Future.scala:292)
+	at scala.concurrent.Future.map$(Future.scala:292)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:379)
+	at scala.concurrent.Future$.apply(Future.scala:658)
+	at play.core.j.JavaAction.apply(JavaAction.scala:192)
+	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:98)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	... 13 common frames omitted
+2019-05-22 18:51:54,324 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-11 - 
+
+! @7c1482bhh - Internal server error, for (POST) [/login] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[not a statement]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:37)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:37)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:41)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:36)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:29)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:64)
+	at scala.util.Either$LeftProjection.map(Either.scala:569)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:64)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:80)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:501)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:58)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:64)
+	at play.runsupport.Reloader.reload(Reloader.scala:501)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:143)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:304)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:189)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1262)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:523)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:409)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:480)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:574)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:742)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:757)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:664)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:579)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-05-22 18:52:16,911 [ERROR] from akka.actor.ActorSystemImpl in play-dev-mode-akka.actor.default-dispatcher-17 - Internal server error, sending 500 response
+akka.http.impl.util.One2OneBidiFlow$OutputTruncationException: Inner flow was completed without producing result elements for 1 outstanding elements
+	at akka.http.impl.util.One2OneBidiFlow$OutputTruncationException$.apply(One2OneBidiFlow.scala:22)
+	at akka.http.impl.util.One2OneBidiFlow$OutputTruncationException$.apply(One2OneBidiFlow.scala:22)
+	at akka.http.impl.util.One2OneBidiFlow$One2OneBidi$$anon$1$$anon$4.onUpstreamFinish(One2OneBidiFlow.scala:97)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:506)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:376)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:480)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:574)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:742)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:757)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:664)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:579)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-05-22 18:52:45,241 [ERROR] from application in application-akka.actor.default-dispatcher-10 - 
+
+! @7c148591k - Internal server error, for (POST) [/login] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NoSuchElementException: No value present]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:351)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:267)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:448)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:446)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	at controllers.RegistrationController.verifyLogin(RegistrationController.java:48)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$16(Routes.scala:254)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:143)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:142)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:116)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:131)
+	at play.mvc.Action.lambda$call$0(Action.java:89)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at play.mvc.Action.call(Action.java:81)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:191)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:79)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:72)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:71)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:372)
+	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:371)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:379)
+	at scala.concurrent.impl.Promise.transform(Promise.scala:33)
+	at scala.concurrent.impl.Promise.transform$(Promise.scala:31)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:379)
+	at scala.concurrent.Future.map(Future.scala:292)
+	at scala.concurrent.Future.map$(Future.scala:292)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:379)
+	at scala.concurrent.Future$.apply(Future.scala:658)
+	at play.core.j.JavaAction.apply(JavaAction.scala:192)
+	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:98)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	... 13 common frames omitted
+2019-05-22 18:53:17,229 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2019-05-22 18:53:17,394 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-13 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 18:53:17,394 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
+2019-05-22 18:53:17,396 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-13 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 18:53:17,396 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-13 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 18:53:17,502 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 18:53:17,503 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
+2019-05-22 18:58:03,440 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2019-05-22 18:58:03,557 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-20 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 18:58:03,557 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-20 - Creating Pool for datasource 'default'
+2019-05-22 18:58:03,562 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-20 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 18:58:03,562 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-20 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 18:58:03,629 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-20 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 18:58:03,631 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-20 - Application started (Dev) (no global state)
+2019-05-22 19:08:13,648 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2019-05-22 19:08:13,756 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-18 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:08:13,756 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-18 - Creating Pool for datasource 'default'
+2019-05-22 19:08:13,761 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-18 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:08:13,761 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-18 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:08:13,831 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-18 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:08:13,832 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-18 - Application started (Dev) (no global state)
+2019-05-22 19:09:55,921 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2019-05-22 19:09:56,025 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-26 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:09:56,025 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - Creating Pool for datasource 'default'
+2019-05-22 19:09:56,044 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:09:56,044 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:09:56,097 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-26 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:09:56,098 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev) (no global state)
+2019-05-22 19:11:42,822 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2019-05-22 19:11:42,919 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-26 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:11:42,919 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - Creating Pool for datasource 'default'
+2019-05-22 19:11:42,937 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:11:42,937 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:11:42,987 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-26 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:11:42,988 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev) (no global state)
+2019-05-22 19:14:01,699 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-34 - 
+
+! @7c14app75 - Internal server error, for (GET) [/register] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[not found: value registerPassword]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:37)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:37)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:41)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:36)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:29)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:64)
+	at scala.util.Either$LeftProjection.map(Either.scala:569)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:64)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:80)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:501)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:58)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:64)
+	at play.runsupport.Reloader.reload(Reloader.scala:501)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:143)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:304)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:189)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1262)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:523)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:409)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:480)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:574)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:742)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:757)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:664)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:579)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-05-22 19:14:30,995 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2019-05-22 19:14:31,143 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-34 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:14:31,143 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-34 - Creating Pool for datasource 'default'
+2019-05-22 19:14:31,150 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-34 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:14:31,151 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-34 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:14:31,222 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-34 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:14:31,224 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-34 - Application started (Dev) (no global state)
+2019-05-22 19:15:02,240 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2019-05-22 19:15:02,346 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-32 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:15:02,346 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-32 - Creating Pool for datasource 'default'
+2019-05-22 19:15:02,371 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-32 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:15:02,372 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-32 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:15:02,435 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-32 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:15:02,436 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-32 - Application started (Dev) (no global state)
+2019-05-22 19:24:49,319 [ERROR] from akka.actor.ActorSystemImpl in play-dev-mode-akka.actor.default-dispatcher-38 - Internal server error, sending 500 response
+akka.http.impl.util.One2OneBidiFlow$OutputTruncationException: Inner flow was completed without producing result elements for 1 outstanding elements
+	at akka.http.impl.util.One2OneBidiFlow$OutputTruncationException$.apply(One2OneBidiFlow.scala:22)
+	at akka.http.impl.util.One2OneBidiFlow$OutputTruncationException$.apply(One2OneBidiFlow.scala:22)
+	at akka.http.impl.util.One2OneBidiFlow$One2OneBidi$$anon$1$$anon$4.onUpstreamFinish(One2OneBidiFlow.scala:97)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:506)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:376)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:480)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:574)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:742)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:757)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:664)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:579)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-05-22 19:26:04,212 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2019-05-22 19:26:04,340 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-37 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:26:04,341 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-37 - Creating Pool for datasource 'default'
+2019-05-22 19:26:04,363 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-37 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:26:04,363 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-37 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:26:04,410 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-37 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:26:04,411 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-37 - Application started (Dev) (no global state)
+2019-05-22 19:28:24,768 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2019-05-22 19:28:24,862 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-46 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:28:24,862 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-46 - Creating Pool for datasource 'default'
+2019-05-22 19:28:24,865 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-46 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:28:24,866 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-46 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:28:24,930 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-46 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:28:24,931 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-46 - Application started (Dev) (no global state)
+2019-05-22 19:30:03,301 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2019-05-22 19:30:03,396 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-48 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:30:03,396 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-48 - Creating Pool for datasource 'default'
+2019-05-22 19:30:03,399 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-48 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:30:03,399 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-48 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:30:03,490 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-48 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:30:03,491 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-48 - Application started (Dev) (no global state)
+2019-05-22 19:31:27,257 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2019-05-22 19:31:27,382 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-41 - Database [default] initialized at jdbc:mysql://localhost:3306/playlogin
+2019-05-22 19:31:27,383 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - Creating Pool for datasource 'default'
+2019-05-22 19:31:27,408 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-41 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 22: applyEvolutions.default is deprecated, use play.evolutions.db.default.autoApply instead
+2019-05-22 19:31:27,408 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-41 - application.conf @ file:/home/admin1/Documents/play%20framework/login/target/scala-2.12/classes/application.conf: 23: applyDownEvolutions.default is deprecated, use play.evolutions.db.default.autoApplyDowns instead
+2019-05-22 19:31:27,480 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-41 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.csrf.CSRFFilter
+
+2019-05-22 19:31:27,482 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-41 - Application started (Dev) (no global state)
+2019-05-22 19:32:54,217 [INFO] from play.core.server.AkkaHttpServer in pool-23-thread-4 - Stopping server...
+2019-05-22 19:32:54,253 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.

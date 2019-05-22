@@ -1,19 +1,16 @@
 [0m[[0m[33mwarn[0m] [0m[0m/home/admin1/Documents/play framework/login/app/views/registerpage.scala.html:12:21: method implicitJavaMessages in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
-[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("id"))[0m
+[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("firstName"))[0m
 [0m[[0m[33mwarn[0m] [0m[0m			                 ^[0m
 [0m[[0m[33mwarn[0m] [0m[0m/home/admin1/Documents/play framework/login/app/views/registerpage.scala.html:13:21: method implicitJavaMessages in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
-[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("FirstName"))[0m
+[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("lastName"))[0m
 [0m[[0m[33mwarn[0m] [0m[0m			                 ^[0m
 [0m[[0m[33mwarn[0m] [0m[0m/home/admin1/Documents/play framework/login/app/views/registerpage.scala.html:14:21: method implicitJavaMessages in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
-[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("LastName"))[0m
+[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("mobileNumber"))[0m
 [0m[[0m[33mwarn[0m] [0m[0m			                 ^[0m
 [0m[[0m[33mwarn[0m] [0m[0m/home/admin1/Documents/play framework/login/app/views/registerpage.scala.html:15:21: method implicitJavaMessages in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
-[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("Mobilenumber"))[0m
+[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("emailId"))[0m
 [0m[[0m[33mwarn[0m] [0m[0m			                 ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/admin1/Documents/play framework/login/app/views/registerpage.scala.html:16:21: method implicitJavaMessages in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
-[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("EmailId"))[0m
-[0m[[0m[33mwarn[0m] [0m[0m			                 ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/admin1/Documents/play framework/login/app/views/registerpage.scala.html:17:21: method implicitJavaMessages in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
-[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputText(registerForm("Password"))[0m
-[0m[[0m[33mwarn[0m] [0m[0m			                 ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m6 warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/admin1/Documents/play framework/login/app/views/registerpage.scala.html:16:25: method implicitJavaMessages in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
+[0m[[0m[33mwarn[0m] [0m[0m			@helper.inputPassword(registerForm("password"))[0m
+[0m[[0m[33mwarn[0m] [0m[0m			                     ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m5 warnings found[0m

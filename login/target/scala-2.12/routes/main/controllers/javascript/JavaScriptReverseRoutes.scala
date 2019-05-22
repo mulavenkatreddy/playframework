@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/admin1/Documents/play framework/login/conf/routes
-// @DATE:Tue May 21 18:55:53 IST 2019
+// @DATE:Wed May 22 18:24:33 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -18,16 +18,6 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
-  
-    // @LINE:22
-    def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RegistrationController.save",
-      """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
-        }
-      """
-    )
   
     // @LINE:14
     def getUsers: JavaScriptReverseRoute = JavaScriptReverseRoute(
@@ -49,7 +39,27 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:23
+    def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RegistrationController.save",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
+        }
+      """
+    )
+  
+    // @LINE:26
+    def verifyLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RegistrationController.verifyLogin",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+        }
+      """
+    )
+  
+    // @LINE:20
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RegistrationController.login",
       """

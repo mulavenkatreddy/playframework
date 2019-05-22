@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/admin1/Documents/play framework/login/conf/routes
-// @DATE:Tue May 21 18:55:53 IST 2019
+// @DATE:Wed May 22 18:24:33 IST 2019
 
 package router
 
@@ -51,6 +51,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.RegistrationController.register"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.RegistrationController.login"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.RegistrationController.save()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.RegistrationController.verifyLogin()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -148,7 +149,7 @@ class Routes(
     )
   )
 
-  // @LINE:19
+  // @LINE:20
   private[this] lazy val controllers_RegistrationController_login5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
@@ -162,11 +163,11 @@ class Routes(
       "GET",
       this.prefix + """login""",
       """""",
-      Seq()
+      Seq("""nocsrf""")
     )
   )
 
-  // @LINE:22
+  // @LINE:23
   private[this] lazy val controllers_RegistrationController_save6_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("register")))
   )
@@ -179,6 +180,24 @@ class Routes(
       Nil,
       "POST",
       this.prefix + """register""",
+      """""",
+      Seq("""nocsrf""")
+    )
+  )
+
+  // @LINE:26
+  private[this] lazy val controllers_RegistrationController_verifyLogin7_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+  )
+  private[this] lazy val controllers_RegistrationController_verifyLogin7_invoker = createInvoker(
+    RegistrationController_1.verifyLogin(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RegistrationController",
+      "verifyLogin",
+      Nil,
+      "POST",
+      this.prefix + """login""",
       """""",
       Seq("""nocsrf""")
     )
@@ -217,16 +236,22 @@ class Routes(
         controllers_RegistrationController_register4_invoker.call(RegistrationController_1.register)
       }
   
-    // @LINE:19
+    // @LINE:20
     case controllers_RegistrationController_login5_route(params@_) =>
       call { 
         controllers_RegistrationController_login5_invoker.call(RegistrationController_1.login)
       }
   
-    // @LINE:22
+    // @LINE:23
     case controllers_RegistrationController_save6_route(params@_) =>
       call { 
         controllers_RegistrationController_save6_invoker.call(RegistrationController_1.save())
+      }
+  
+    // @LINE:26
+    case controllers_RegistrationController_verifyLogin7_route(params@_) =>
+      call { 
+        controllers_RegistrationController_verifyLogin7_invoker.call(RegistrationController_1.verifyLogin())
       }
   }
 }

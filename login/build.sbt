@@ -13,9 +13,12 @@ libraryDependencies += guice
 libraryDependencies += "com.h2database" % "h2" % "1.4.192"
 libraryDependencies ++= Seq(evolutions, jdbc)
 libraryDependencies += javaJdbc
+libraryDependencies += jdbc
+libraryDependencies += evolutions
 libraryDependencies += "org.glassfish.jaxb" % "jaxb-core" % "2.3.0.1"
 libraryDependencies += "org.glassfish.jaxb" % "jaxb-runtime" % "2.3.2"
 libraryDependencies += javaForms
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.41"
 
 // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
 EclipseKeys.preTasks := Seq(compile in Compile, compile in Test)

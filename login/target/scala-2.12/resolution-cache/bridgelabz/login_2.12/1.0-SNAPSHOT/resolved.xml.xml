@@ -4,7 +4,7 @@
 		module="login_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20190521194106"
+		publication="20190522182824"
 	>
 		<description>
 		login
@@ -61,5 +61,6 @@
 		<dependency org="com.typesafe.play" name="play-java-jdbc_2.12" rev="2.7.2" conf="compile->default(compile)"/>
 		<dependency org="org.glassfish.jaxb" name="jaxb-core" rev="2.3.0.1" conf="compile->default(compile)"/>
 		<dependency org="org.glassfish.jaxb" name="jaxb-runtime" rev="2.3.2" conf="compile->default(compile)"/>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.41" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

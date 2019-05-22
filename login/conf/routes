@@ -16,10 +16,14 @@ GET     /sample                        controllers.RegistrationController.getUse
 +nocsrf
 GET     /register						controllers.RegistrationController.register	
 
++nocsrf
 GET     /login						controllers.RegistrationController.login
 	
 +nocsrf
 POST    /register                     controllers.RegistrationController.save()
+
++nocsrf
+POST    /login                     controllers.RegistrationController.verifyLogin()
 
 
 

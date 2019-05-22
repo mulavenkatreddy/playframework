@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/admin1/Documents/play framework/login/conf/routes
-// @DATE:Tue May 21 18:55:53 IST 2019
+// @DATE:Wed May 22 18:24:33 IST 2019
 
 import play.api.mvc.Call
 
@@ -18,12 +18,6 @@ package controllers {
     }
 
   
-    // @LINE:22
-    def save(): Call = {
-      
-      Call("POST", _prefix + { _defaultPrefix } + "register")
-    }
-  
     // @LINE:14
     def getUsers(): Call = {
       
@@ -36,7 +30,19 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "register")
     }
   
-    // @LINE:19
+    // @LINE:23
+    def save(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "register")
+    }
+  
+    // @LINE:26
+    def verifyLogin(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "login")
+    }
+  
+    // @LINE:20
     def login(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "login")
